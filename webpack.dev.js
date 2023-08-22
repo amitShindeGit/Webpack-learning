@@ -4,9 +4,10 @@ const {merge} = require("webpack-merge");
 
 module.exports = merge(common, {
   mode: "development",
-  devServer: { contentBase: "./dist" },
+  devServer: { static: "./dist" },
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "images/[name][ext]",
   },
 });
